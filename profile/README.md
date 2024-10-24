@@ -1,16 +1,28 @@
-# eegfaktura public repository
-Public repository providing all information required to run your own eegfaktura instance.
-
 # eegfaktura
-eegfaktura is a open source project initiated by [Verein zur Förderung von Erneuerbaren Energiegemeinschaften ](https://vfeeg.org) and backed by ... ... to provide a free management and invoicing system for so called **renewable energy communitys**. 
+Public repository providing all information required to run your own `eegfaktura` instance.
 
-<!--
+`eegfaktura` is an open source project initiated by [Verein zur Förderung von Erneuerbaren Energiegemeinschaften ](https://vfeeg.org) to provide a free management and invoicing system for Energiegemeinschaften (EEG; lit. "energy community")
 
-**Here are some ideas to get you started:**
+```mermaid
+flowchart TD
+    web[eegfaktura-web]
+    web --> backend[eegfaktura-backend]
+    web --> energystore[eegfaktura-energystore]
+    web --> filestore[eegfaktura-filestore]
+    web --> billing[eegfaktura-billing]
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+    filestore --> db[(db_filestore)]
+
+    billing --> db
+
+    eda[eegfaktura-eda] --> db
+
+    backend --> db
+    backend --> mqtt@{ shape: lean-l, label: "mqttbroker" }
+
+    energystore --> mqtt
+
+    click web "https://github.com/eegfaktura/eegfaktura-web" "Open eegfaktura-web repo"
+    click backend "https://github.com/eegfaktura/eegfaktura-backend" "Open eegfaktura-backend repo"
+    click filestore "https://github.com/eegfaktura/eegfaktura-filestore" "Open eegfaktura-filestore repo"
+```
