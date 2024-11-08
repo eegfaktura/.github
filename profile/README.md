@@ -15,7 +15,7 @@ flowchart TD
 
     billing --> db
 
-    eda[eegfaktura-eda] --> db
+    eda[eegfaktura-eda-comm] --> db
 
     backend --> db
     backend --> mqtt@{ shape: lean-l, label: "mqttbroker" }
@@ -25,4 +25,5 @@ flowchart TD
     click web "https://github.com/eegfaktura/eegfaktura-web" "Open eegfaktura-web repo"
     click backend "https://github.com/eegfaktura/eegfaktura-backend" "Open eegfaktura-backend repo"
     click filestore "https://github.com/eegfaktura/eegfaktura-filestore" "Open eegfaktura-filestore repo"
+    click eda "https://github.com/eegfaktura/eegfaktura-eda-comm" "Open eegfaktura-eda-comm"
 ```
