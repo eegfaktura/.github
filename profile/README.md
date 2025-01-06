@@ -27,4 +27,5 @@ flowchart TD
     click filestore "https://github.com/eegfaktura/eegfaktura-filestore" "Open eegfaktura-filestore repo"
     click eda "https://github.com/eegfaktura/eegfaktura-eda-comm" "Open eegfaktura-eda-comm"
     click energystore "https://github.com/eegfaktura/eegfaktura-energystore" "Open eegfaktura-energystore"
+    click billing "https://github.com/eegfaktura/eegfaktura-billing" "Open eegfaktura-billing"
 ```
